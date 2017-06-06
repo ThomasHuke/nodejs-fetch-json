@@ -37,8 +37,11 @@
                     };
                     //获取node并监听click事件。
 
-//大约十秒更新一次数据。
-              setInterval(age,10000)
+
+                const a = document.getElementsByTagName('input');
+
+                let b = [].slice.call(a);
+                setInterval(age,1000)
 
                 //                alert(b[0])
 
