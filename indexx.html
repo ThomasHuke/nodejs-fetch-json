@@ -35,15 +35,20 @@
 
 
                     };
-                    //获取node并监听click事件。
+                    setInterval(age,10000);
+                     //获取node并监听click事件。
 
 
-                const a = document.getElementsByTagName('input');
+                 const a = document.getElementsByTagName('input');
 
-                let b = [].slice.call(a);
-                setInterval(age,1000)
+                 let b = [].slice.call(a);
+                 b[0].addEventListener('click',age);
 
-                //                alert(b[0])
+                 //                alert(b[0])
+ //                setInterval(() => {
+ //                    b[0].addEventListener('click',age,false);
+ //                },100)
+
 
     </script>
 
