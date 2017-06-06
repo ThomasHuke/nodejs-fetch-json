@@ -1,0 +1,8 @@
+{"name":"nodejs-fetch-json",
+"version":"0.0.1",
+"author":"ThomasHuke[thomashuke@icloud.com]",
+"description":"利用nodejs fetch 传递json",
+"keywords":["nodejs","fetch","json","ajax"],
+"devDependencies":{
+  "nodejs":"~7.10"
+  }}

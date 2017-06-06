@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body onload="age()">
+    <input type="button" value="收到事件">
+    <p id="in">等待接受信息。。。中</p>
+    </body>
+    <script>//命名age函数
+                const age = async() => {
+
+                    const url = "http://localhost:3001/";
+
+                        if( 'fetch' in window) {
+//                            fetch(url).then(re => re.json()).then(v => {
+//
+//                                document.getElementById('in').innerHTML = v
+//
+//                            });
+                            try {
+                                var responseJson = await fetch(url);
+                                let a = await responseJson.json();
+                                var b = await a;
+                                var c = JSON.stringify(b)
+
+                            }catch (e) {
+
+                            }
+                            document.getElementsByTagName('p')[0].innerText = c;
+                        }
+
+
+
+                    };
+                    //获取node并监听click事件。
+
+
+                const a = document.getElementsByTagName('input');
+
+                let b = [].slice.call(a);
+
+                //                alert(b[0])
+                b[0].addEventListener('click',age,false);
+    </script>
+
+</html>
